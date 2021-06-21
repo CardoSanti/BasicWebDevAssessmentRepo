@@ -175,6 +175,12 @@ openCartModel.onclick = () => {
     //alert("button cart clicked!");
     modal.classList.add('active');
     overlay.classList.add('active');
+    //insert function to add cart items here
+    document.getElementById("modal-body").innerHTML = `
+    ${cartItems.map(getCartItemsHTML).join('')}
+    `;
+
+
 }
 
 closeCartModel.onclick = () => removeModal();
@@ -185,3 +191,43 @@ const removeModal = () => {
     modal.classList.remove('active');
     overlay.classList.remove('active');
 }
+
+
+
+getCartItemsHTML = (cartItems) => {
+
+    const cString = `
+    <div class="grid-item-cart grid-item-${cartItems.product_num}">
+        <img src="${cartItems.product_picture}" alt="" class="img-gt-cart img-gt-${cartItems.product_num}">
+        <p class="label-gt-cart label-gt-${cartItems.product_num}">${cartItems.product_name}</p>
+        <div class="bottom-container-cart">
+            <p class="price-gt-cart price-gt-${cartItems.product_num}">${cartItems.product_price}</p>
+        </div>
+    </div>
+    `
+    return cString;
+
+}
+
+// getGridHTML = (product) => {
+
+//     const _String = `
+//     <div class="grid-item grid-item-${product.product_num}">
+//         <img src="${product.product_picture}" alt="" class="img-gt img-gt-${product.product_num}">
+//         <p class="label-gt label-gt-${product.product_num}">${product.product_name}</p>
+//         <div class="bottom-container">
+//             <p class="price-gt price-gt-${product.product_num}">${product.product_price}</p>
+//             <button id="btn-gt-${product.product_num}" class="btn-gt btn-gt-1${product.product_num}">add to cart</button>
+//         </div>
+//     </div>
+// `   
+//     //console.log(_String);
+
+//     return _String;
+// };
+
+// document.getElementById('section-grid').innerHTML =  
+// `
+    
+//     ${productData.map(getGridHTML).join('')}
+// `;
