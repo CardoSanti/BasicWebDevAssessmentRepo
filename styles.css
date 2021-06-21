@@ -10,7 +10,7 @@
 
 header {
     height: 10vh;
-    background-color: #05445E;
+    background-color: #189AB4;
 }
 
 /*Baby Blue
@@ -35,7 +35,20 @@ Cream
 #FAE8E0
 
 Hot Pink
-#EF7C8E */
+#EF7C8E 
+
+Teal
+#29A0B1
+
+Teal Green
+#167D7F
+
+Spearmint
+#98D7C2
+
+Mint
+#DDFFE7
+*/
 
 header {
     display: flex;
@@ -50,15 +63,25 @@ header {
 }
 
 .img-cart {
+    padding: 2px 2px;
     height: 2em;
     width: auto;
     filter: invert(100%);
 }
 
 .button-cart {
-    background-color: #05445E;
+    background-color: #189AB4;
     border: none;
     cursor: pointer;
+    border-radius: 15%;
+}
+
+.button-cart:hover {
+    background-color: #FFF;
+}
+
+.img-cart:hover {
+    filter: none;
 }
 
 /* .nav-header {
@@ -74,7 +97,81 @@ header {
 
 
 
+/*==================================SECTION-SLIDER===================================*/
 
+.section-slider {
+    height: 70vh;
+    /* background-color: rosybrown; */
+}
+
+#slider {
+    overflow: hidden;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider ease-in-out infinite;
+}
+
+#slider figure div {
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: 0%;
+    }
+
+    /* 95% {
+        left: -300%;
+    } */
+
+    100% {
+        left: 0%;
+    }
+
+}
+
+
+.slider-item {
+    display: flex;
+    /* padding: 1em 1em; */
+    justify-content: center;
+    align-items: center;
+}
+
+.img-item {
+    height: auto;
+    width: 200vh;
+}
 
 
 
