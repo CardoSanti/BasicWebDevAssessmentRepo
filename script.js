@@ -1,3 +1,4 @@
+
 const productData = [
     {
         product_name: 'Garden Explorer Red Floral Print Mini Dress',
@@ -71,6 +72,8 @@ const productData = [
     },
 ];
 
+let cartItems = [];
+
 getGridHTML = (product) => {
 
     const _String = `
@@ -83,7 +86,7 @@ getGridHTML = (product) => {
         </div>
     </div>
 `   
-    console.log(_String);
+    //console.log(_String);
 
     return _String;
 };
@@ -92,3 +95,93 @@ document.getElementById('section-grid').innerHTML =  `
     
     ${productData.map(getGridHTML).join('')}
 `;
+
+
+
+const btn1 = document.getElementById("btn-gt-1");
+const btn2 = document.getElementById("btn-gt-2");
+const btn3 = document.getElementById("btn-gt-3");
+const btn4 = document.getElementById("btn-gt-4");
+const btn5 = document.getElementById("btn-gt-5");
+const btn6 = document.getElementById("btn-gt-6");
+const btn7 = document.getElementById("btn-gt-7");
+const btn8 = document.getElementById("btn-gt-8");
+const btn9 = document.getElementById("btn-gt-9");
+const btn10 = document.getElementById("btn-gt-10");
+
+btn1.onclick = () => {
+    addProductToCart(0);
+    alert("Item 1 added to cart!");
+};
+
+btn2.onclick = () => {
+    addProductToCart(1);
+    alert("Item 2 added to cart!");
+};
+
+btn3.onclick = () => {
+    addProductToCart(2);
+    alert("Item 3 added to cart!");
+};
+
+btn4.onclick = () => {
+    addProductToCart(3);
+    alert("Item 4 added to cart!");
+};
+
+btn5.onclick = () => {
+    addProductToCart(4);
+    alert("Item 5 added to cart!");
+};
+
+btn6.onclick = () => {
+    addProductToCart(5);
+    alert("Item 6 added to cart!");
+};
+
+btn7.onclick = () => {
+    addProductToCart(6);
+    alert("Item 7 added to cart!");
+};
+
+btn8.onclick = () => {
+    addProductToCart(7);
+    alert("Item 8 added to cart!");
+};
+
+btn9.onclick = () => {
+    addProductToCart(8);
+    alert("Item 9 added to cart!");
+};
+
+btn10.onclick = () => {
+    addProductToCart(9);
+    alert("Item 10 added to cart!");
+};
+
+
+const addProductToCart = (num) => {
+    const tempProduct = productData[num];
+    cartItems.push(tempProduct);
+    console.log(tempProduct.product_name);
+}
+
+const openCartModel = document.getElementById("button-cart");
+const closeCartModel = document.getElementById("button-close-modal");
+const overlay = document.getElementById("overlay");
+const modal = document.getElementById("modal");
+
+openCartModel.onclick = () => {
+    //alert("button cart clicked!");
+    modal.classList.add('active');
+    overlay.classList.add('active');
+}
+
+closeCartModel.onclick = () => removeModal();
+
+overlay.onclick = () => removeModal();
+
+const removeModal = () => {
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
