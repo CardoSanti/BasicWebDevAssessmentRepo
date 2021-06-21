@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*==================================HEADER===================================*/
+
+header {
+    height: 10vh;
+    background-color: #05445E;
+}
+
+/*Baby Blue
+#D4F1F4
+
+Blue Green
+#75E6DA
+
+Blue Grotto
+#189AB4
+
+Navy Blue
+#05445E*/
+
+/* Rosewater
+#D8A7B1
+
+Spearmint
+#B6E2D3
+
+Cream
+#FAE8E0
+
+Hot Pink
+#EF7C8E */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+
+
+.logo {    
+    cursor: pointer;
+}
+
+.img-cart {
+    height: 2em;
+    width: auto;
+    filter: invert(100%);
+}
+
+.button-cart {
+    background-color: #05445E;
+    border: none;
+    cursor: pointer;
+}
+
+/* .nav-header {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.container-logo, .container-button {
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
